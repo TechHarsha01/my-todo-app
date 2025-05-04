@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - To-Do App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .auth-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .auth-box h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .auth-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .auth-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ed8936;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .auth-box button:hover {
+            background-color: #dd6b20;
+        }
+        .auth-box p {
+            margin-top: 15px;
+            color: #555;
+        }
+        .auth-box a {
+            color: #ed8936;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-box">
+        <h2>Create Account</h2>
+        <form method="POST">
+            <input name="username" placeholder="Username" required>
+            <input name="password" type="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</body>
+</html>

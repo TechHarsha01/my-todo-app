@@ -1,0 +1,206 @@
+/* Base Setup */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card */
+.todo-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Heading */
+.todo-card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Gallery Layout */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.image-gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Welcome */
+.welcome {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.welcome a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Form */
+.task-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.task-form input, .task-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #218838;
+}
+
+.done-btn {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.done-btn:hover {
+    background-color: #c53030;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background: #0056b3;
+}
+
+/* Task Box */
+.task-box {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Priority Styling */
+.priority-low {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.priority-medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.priority-high {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #2a2e3f;
+    color: #f1f1f1;
+}
+
+.dark-mode .todo-card {
+    background: #3b3f51;
+}
+
+.dark-mode input,
+.dark-mode select {
+    background: #555c70;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+.dark-mode .task-box {
+    background-color: #444a60;
+}
+
+.dark-mode .task-item {
+    background: #5a617e;
+    color: #fff;
+}
+
+.dark-mode .priority-low {
+    background-color: #2f4d3f;
+    color: #a9f8c4;
+}
+
+.dark-mode .priority-medium {
+    background-color: #5a4d30;
+    color: #ffe79c;
+}
+
+.dark-mode .priority-high {
+    background-color: #663c3c;
+    color: #ffc1c1;
+}
+
+.logout-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

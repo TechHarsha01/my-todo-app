@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="todo-card">
+        <h1>My To-Do List</h1>
+
+        <div class="image-gallery">
+            <img src="{{ url_for('static', filename='images/Motivational quotes1.png') }}" alt="Motivation">
+            <img src="{{ url_for('static', filename='images/To-Do.png') }}" alt="To-Do">
+        </div>
+
+        <p class="welcome">
+            Welcome, {{ user }}! 🤩
+        </p>
+    
+        <form class="task-form" action="/" method="POST">
+            <input type="text" name="task" placeholder="Enter a task (e.g., Sleep)">
+            <select name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button class="btn-primary" type="submit" name="add">Add Task</button>
+        </form>
+
+        <div class="task-box">
+            {% for task in tasks %}
+                <div class="task-item priority-{{ task.priority }}">
+                    <span>{{ task.name }}</span>
+                    <form method="POST" action="/" style="margin: 0;">
+                        <input type="hidden" name="delete" value="{{ task.id }}">
+                        <button class="done-btn" type="submit">Done</button>
+                    </form>
+                </div>
+            {% else %}
+                <p>No tasks yet!</p>
+            {% endfor %}
+        </div>
+
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <br><br><br>
+        <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
